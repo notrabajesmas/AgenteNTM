@@ -85,6 +85,7 @@ export default function Home() {
         setMessages(prev => [...prev, errorMessage])
       }
     } catch (error) {
+      console.error('Error:', error)
       const errorMessage: Message = {
         id: generateId(),
         role: 'assistant',
@@ -114,10 +115,7 @@ export default function Home() {
   }
 
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('es-ES', { 
-      hour: '2-digit', 
-      minute: '2-digit' 
-    })
+    return date.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })
   }
 
   return (
