@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
         'Authorization': `Bearer ${GROK_API_KEY}`
       },
       body: JSON.stringify({
-        model: 'grok-2-latest',
+        model: 'grok-3',
         messages: allMessages,
         temperature: 0.8,
         max_tokens: 2000
